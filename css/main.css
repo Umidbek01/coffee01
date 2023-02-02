@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    /* BODY - tegini doimiy ravishda har tomonida 8px margini bo'ladi shuni doimiy ravishda olib tashlashimiz kerak, doim -> margin: 0; */
+    background-color: #FEFCF7;
+    /* background-color: #00f; */
+    font-family: "Fraunces", "Arial", sans-serif;
+    font-weight: 900;
+}
+
+ul, 
+ol{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1310px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/***************** HEADER STYLES START *****************/
+.site-header{
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    padding-top: 43px;
+    padding-bottom: 43px;
+    background-color: #FEFCF7;
+    /* box-shadow: 0 0 5px 5px #ccc; */
+}
+
+.site-header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sitenav__list{
+    display: flex;
+}
+
+.sitenav__item:not(:last-child){
+    margin-right: 32px;
+}
+
+.sitenav__link{
+    font-family: 'Barlow';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.923077px;
+    color: #83888F;
+}
+
+.sitenav__link:active{
+    color: #333D4B;
+}
+
+/* HIDDEN HEADER START */
+.burger-menu__btn{
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.hidden-header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 90px;
+    padding-top: 40px;
+    background: linear-gradient(to top, rgba(254, 252, 247, 0.504981) 0%, #FEFCF7 55.94%);
+    transition: 0.5s;
+    transform: translateY(-150%);
+}
+
+.hidden-header.show-header{
+    transform: translateY(0%);
+}
+
+.hidden-nav{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hidden-nav__item{
+    margin-bottom: 32px;
+}
+
+.hidden-nav__link{
+    font-size: 24px;
+    line-height: 32px;
+    color: #333D4B;    
+}
+/* HIDDEN HEADER END */
+
+/******* HEADER RESPONSIVE START ******/
+@media only screen and (max-width: 1200px) {
+    .site-header{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .site-header__logo--img{
+        width: 235px;
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width: 565px) {
+    .site-header{
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+    
+    .sitenav{
+        display: none;
+    }
+    
+    .burger-menu__btn{
+        display: block;
+    }
+    
+    .site-header__logo--img{
+        width: 162px;
+        height: 17px;
+    }
+    
+    
+}
+/******* HEADER RESPONSIVE END ******/
+/***************** HEADER STYLES END *****************/
+
+
+
+/*************** SITE MAIN STYELS START *****************/
+/* HERO STYLE START */
+.hero__wrapper{
+    padding-top: 117px;
+    padding-bottom: 116px;
+    padding-left: 85px;
+    background-image: url("../images/herobg.png");
+    background-size: cover;
+    border-radius: 10px;
+    /* background-position: center; */
+}
+
+.hero__wrapper-start{
+    width: 100%;
+    max-width: 493px;
+}
+
+.hero__wrapper-title{
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 72px;
+    line-height: 72px;
+    color: #FEFCF7;
+}
+
+.hero__wrapper-desc{
+    width: 100%;
+    max-width: 445px;
+    margin-top: 0;
+    margin-bottom: 56px;
+    font-family: 'Barlow';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FEFCF7;
+}
+
+.hero__wrapper-link{
+    display: inline-block;
+    margin-top: 0;
+    padding: 15px 31px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    background: #0E8784;
+    border-radius: 6px;
+    color: #FEFCF7;
+}
+
+
+
+/* HERO STYLE END */
+
+
+/*************** SITE MAIN STYELS END ****************/
